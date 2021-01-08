@@ -62,6 +62,7 @@ public class GameManager : MonoBehaviour
 
     private void GameStart()
     {
+        Player.SetActive(true);
         //disables the masks on alien faces
         GameObject[] MaskArray = GameObject.FindGameObjectsWithTag("Mask");
         if (MaskArray.Length > 0)
@@ -100,22 +101,23 @@ public class GameManager : MonoBehaviour
 
                 }
             }
+        }
 
-            if (Player.transform.position.y <0)
+        if (Player.transform.position.y < -5)
+        {
+            if (Player.transform.GetChild(3).gameObject.activeSelf)
             {
-                if (Player.transform.GetChild(3).gameObject.activeSelf)
-                {
-                    Player.transform.position = initPlayer+Vector3.one;
-                    Player.transform.GetChild(3).gameObject.SetActive(false);
+                Player.transform.position = initPlayer + Vector3.one;
+                Player.transform.GetChild(3).gameObject.SetActive(false);
 
-                }
-                else
-                {
-                    ResetLevel();
-                }
+            }
+            else
+            {
+                Player.SetActive(false);
+                ResetLevel();
             }
         }
-   
+
     }
     
 

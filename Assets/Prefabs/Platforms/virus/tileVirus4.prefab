@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3057999157204341841}
   m_Layer: 0
   m_Name: virus
-  m_TagString: Virus
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 9003873038760984845}
   m_Layer: 0
   m_Name: Low_Poly
-  m_TagString: Untagged
+  m_TagString: Virus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -384,6 +384,7 @@ GameObject:
   - component: {fileID: -7996813008676494858}
   - component: {fileID: -2446563383647316009}
   - component: {fileID: -1930279360314801688}
+  - component: {fileID: 927182449156441097}
   m_Layer: 0
   m_Name: tileVirus4
   m_TagString: Ground
@@ -475,6 +476,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &927182449156441097
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7180091172168828175}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 16.270002, y: 10.85, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7756246870176583800
 GameObject:
   m_ObjectHideFlags: 0

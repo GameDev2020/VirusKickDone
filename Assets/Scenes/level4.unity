@@ -292,6 +292,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 159455638}
   m_CullTransparentMesh: 1
+--- !u!1 &164732413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 164732414}
+  - component: {fileID: 164732416}
+  - component: {fileID: 164732415}
+  m_Layer: 8
+  m_Name: CenterColl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &164732414
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164732413}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.42999998, y: 5.7999988, z: 1.5285709}
+  m_LocalScale: {x: 2, y: 1.7999998, z: 1.4999999}
+  m_Children: []
+  m_Father: {fileID: 1160157832}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &164732415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164732413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5755c7176582d504c8ee07d059e44a0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gm: {fileID: 1862467473}
+  tag: Ground
+--- !u!65 &164732416
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164732413}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 8, z: 3}
+  m_Center: {x: 0, y: -1, z: 0.92}
 --- !u!1 &211259559
 GameObject:
   m_ObjectHideFlags: 0
@@ -3480,6 +3539,7 @@ GameObject:
   - component: {fileID: 1160157827}
   - component: {fileID: 1160157826}
   - component: {fileID: 1160157833}
+  - component: {fileID: 1160157834}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -3612,6 +3672,7 @@ Transform:
   - {fileID: 763735923}
   - {fileID: 56958194}
   - {fileID: 1974156152}
+  - {fileID: 164732414}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3631,6 +3692,20 @@ MonoBehaviour:
   prefabToSpawn: {fileID: 2506986033014805994, guid: 5fdaf4601a622cd42974f9f0d9f028de, type: 3}
   velocityOfSpawnedObject: {x: 0, y: 0, z: 1}
   lifeSpan: 1.5
+--- !u!114 &1160157834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160157825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5755c7176582d504c8ee07d059e44a0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gm: {fileID: 1862467473}
+  tag: Virus
 --- !u!1 &1169285513
 GameObject:
   m_ObjectHideFlags: 0

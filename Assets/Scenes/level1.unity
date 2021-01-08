@@ -2300,10 +2300,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ship: {fileID: 1373624237}
   horizontalSpeed: 20
-  forwardSpeed: 1.5
+  forwardSpeed: 2
   controlRollFactor: -15
   _jumpmultiplier: 10
-  fallMultiplier: 4
+  fallMultiplier: 5
   lowJumpMultiplier: 5
 --- !u!114 &794916526
 MonoBehaviour:
@@ -3842,12 +3842,12 @@ MonoBehaviour:
   - {fileID: 7180091172168828175, guid: a327e69ebd449dc418842ace1453f24f, type: 3}
   - {fileID: 3895956202767719399, guid: 3a80e71530966954bad2098c09953f63, type: 3}
   - {fileID: 1113826847418738744, guid: a3eb526313a091546b600c2aea8b94aa, type: 3}
-  - {fileID: 7180091172168828175, guid: d9d6fc4133257b34bacbc8f9f443d545, type: 3}
-  - {fileID: 1113826847418738744, guid: fe15de45e43e5214187e5a73c003abea, type: 3}
-  - {fileID: 3586802025779302225, guid: f214d8f976e349c4ba02911dcb496b5d, type: 3}
-  - {fileID: 7180091172168828175, guid: 905aea931bfd6674cb8d9e3d469b6c4f, type: 3}
-  - {fileID: 3895956202767719399, guid: fab283cedf2cb8c4da7143509431db36, type: 3}
-  - {fileID: 7180091172168828175, guid: d9d6fc4133257b34bacbc8f9f443d545, type: 3}
+  - {fileID: 3895956202767719399, guid: 04b49ea2b350758419cfc6fc455f8923, type: 3}
+  - {fileID: 3895956202767719399, guid: 04b49ea2b350758419cfc6fc455f8923, type: 3}
+  - {fileID: 7180091172168828175, guid: 3e5c746215b867145b5a97c5086790c2, type: 3}
+  - {fileID: 7180091172168828175, guid: 3c97451a54cef1d4c9fbc1762cd6bfef, type: 3}
+  - {fileID: 7180091172168828175, guid: a327e69ebd449dc418842ace1453f24f, type: 3}
+  - {fileID: 3895956202767719399, guid: b154275a518452a4499aac95f6bb04b2, type: 3}
   - {fileID: 1113826847418738744, guid: fe15de45e43e5214187e5a73c003abea, type: 3}
   - {fileID: 3586802025779302225, guid: f214d8f976e349c4ba02911dcb496b5d, type: 3}
   - {fileID: 7180091172168828175, guid: 905aea931bfd6674cb8d9e3d469b6c4f, type: 3}
