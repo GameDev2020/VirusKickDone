@@ -22,13 +22,24 @@ public class PlatformPooler : MonoBehaviour
     void Start()
     {
         platformPooled = new List<GameObject>();
-
-        for(int i = 0; i < amountToPool;  i++)
+        
+        for (int i = 0; i < amountToPool;  i++)
         {
-            GameObject obj = (GameObject)Instantiate(platformsPrefabs[Random.Range(0, platformsPrefabs.Count)]);           
-            obj.SetActive(false);
+            GameObject obj = (GameObject)Instantiate(platformsPrefabs[Random.Range(0, platformsPrefabs.Count)]);            
+            obj.SetActive(false);            
             platformPooled.Add(obj);
-        }       
+        }
+
+        foreach (GameObject maskobj in platformPooled)
+        {
+            
+            GameObject mask = maskobj.transform.GetChild(0).gameObject;
+            mask.SetActive(false);
+
+        }
+
+
+
     }
 
     public GameObject GetPooledObject()

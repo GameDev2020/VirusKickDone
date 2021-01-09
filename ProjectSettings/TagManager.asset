@@ -8,6 +8,9 @@ TagManager:
   - Virus
   - Mask
   - Sheild
+  - Infection Slider
+  - Alien
+  - AlienMask
   layers:
   - Default
   - TransparentFX

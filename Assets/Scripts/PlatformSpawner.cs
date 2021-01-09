@@ -12,18 +12,23 @@ public class PlatformSpawner : MonoBehaviour
     private float space = 40;
     [SerializeField]
     private float spawnCountTimeMax = 1f;
+    private GameObject ground;
+
 
     private Transform previousPlatform;
     private GameManager gm;
 
     private float spawnCountTime;
 
-   
+
+
     // Start is called before the first frame update
     void Start()
     {
         gm = GameManager.Instance;
         GameManager.onGameStart += Reset;
+        ground = GameObject.FindGameObjectWithTag("Ground"); 
+
     }
 
     private void Reset()
@@ -60,7 +65,7 @@ public class PlatformSpawner : MonoBehaviour
             platform.transform.position = new Vector3(0, 0, previousPlatform.position.z + space);
             previousPlatform = platform.transform;
             platform.SetActive(true);
-            if (platform.transform.childCount!=0)
+            if (platform.transform.childCount != 0)
             {
                 platform.transform.GetChild(0).gameObject.SetActive(true);
             }

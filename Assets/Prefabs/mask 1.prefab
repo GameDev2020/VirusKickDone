@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2127213148667105142}
   - component: {fileID: 380137275137871563}
-  - component: {fileID: -3200001177146568405}
-  - component: {fileID: -3016551349166699889}
+  - component: {fileID: 5077917048481457970}
+  - component: {fileID: 8127424372541688104}
+  - component: {fileID: -3389758529046163613}
   m_Layer: 0
-  m_Name: mask
+  m_Name: mask 1
   m_TagString: Mask
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +76,32 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &-3200001177146568405
+--- !u!114 &5077917048481457970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2506986033014805994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54bf2c01dda344a459cb58e79a1c448f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &8127424372541688104
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2506986033014805994}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &-3389758529046163613
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,24 +112,11 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
---- !u!65 &-3016551349166699889
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2506986033014805994}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_CollisionDetection: 0
 --- !u!1 &3076614106766266387
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,7 +143,7 @@ Transform:
   m_GameObject: {fileID: 3076614106766266387}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.19, y: 3.67, z: 0}
-  m_LocalScale: {x: 0.6911, y: 0.7253, z: 3}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 3}
   m_Children: []
   m_Father: {fileID: 2127213148667105142}
   m_RootOrder: 0

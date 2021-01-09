@@ -7,6 +7,7 @@ public class PlayerChildColl : MonoBehaviour
 
     public delegate void OnCollision();
     public static event OnCollision onCollision;
+    public float timeForSheild = 10f;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +37,7 @@ public class PlayerChildColl : MonoBehaviour
 
     IEnumerator SheildTimer()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(timeForSheild);
         transform.parent.GetChild(3).gameObject.SetActive(false);
     }
 
