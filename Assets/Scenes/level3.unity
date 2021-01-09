@@ -3364,6 +3364,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gm: {fileID: 1354362850}
   tag: Ground
+  livesObj: []
+  life: 0
 --- !u!65 &1274051803
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4169,6 +4171,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gm: {fileID: 1354362850}
   tag: Virus
+  livesObj: []
+  life: 0
 --- !u!1 &1400386194
 GameObject:
   m_ObjectHideFlags: 0

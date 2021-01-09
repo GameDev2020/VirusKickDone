@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3057999157204341841}
   m_Layer: 0
   m_Name: virus
-  m_TagString: Untagged
+  m_TagString: Virus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3100994429784349596}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.6, y: -1.3, z: 0}
+  m_LocalPosition: {x: 11.6, y: 3.11, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 5322820146359442235}
@@ -99,7 +99,6 @@ GameObject:
   - component: {fileID: 710108403858595986}
   - component: {fileID: 4424515278253761639}
   - component: {fileID: 4546070828089088300}
-  - component: {fileID: 2910525119708831373}
   m_Layer: 0
   m_Name: Low_Poly
   m_TagString: Virus
@@ -183,19 +182,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   round: 50
---- !u!65 &2910525119708831373
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5589712557879370670}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 16.270002, y: 10.85, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7180091172168828175
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,7 +583,7 @@ GameObject:
   - component: {fileID: 2055026125782841859}
   m_Layer: 0
   m_Name: sars_root
-  m_TagString: Untagged
+  m_TagString: Virus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -610,7 +596,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7756246870176583800}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.155, y: 0.54, z: 0}
+  m_LocalPosition: {x: -0.155, y: 0.091, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 770531960501009682}
