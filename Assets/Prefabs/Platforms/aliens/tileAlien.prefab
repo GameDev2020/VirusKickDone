@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 1249852964888870652}
   - component: {fileID: 7475104137583973235}
   - component: {fileID: 4916719536952386580}
+  - component: {fileID: 8793907470433499880}
   m_Layer: 0
   m_Name: Insect
   m_TagString: Alien
@@ -191,6 +192,22 @@ CapsuleCollider:
   m_Height: 3.500417
   m_Direction: 1
   m_Center: {x: -0.027177615, y: -0.9152522, z: 1.2826669}
+--- !u!54 &8793907470433499880
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249852964885754450}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1249852964885754452
 GameObject:
   m_ObjectHideFlags: 0
@@ -1835,7 +1852,7 @@ Transform:
   - {fileID: 1249852964885786546}
   - {fileID: 1249852964885786604}
   m_Father: {fileID: 3895956202767719416}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!95 &1249852964892999740
 Animator:
@@ -1884,6 +1901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab44a1fe6eae6b34ea24e3b80a12d9d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InfectionCoefficient: 0.2
 --- !u!136 &3475287675800699222
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1944,7 +1962,6 @@ GameObject:
   - component: {fileID: -128327471702742530}
   - component: {fileID: 5268835059921857386}
   - component: {fileID: -2493248935839289650}
-  - component: {fileID: 9131427117622451835}
   m_Layer: 0
   m_Name: tileAlien
   m_TagString: Ground
@@ -1963,11 +1980,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 400076910973031450}
   - {fileID: 3895956202927016450}
   - {fileID: 3895956202937359342}
   - {fileID: 3895956202904438978}
   - {fileID: 1249852964885786588}
+  - {fileID: 400076910973031450}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2054,18 +2071,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &9131427117622451835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3895956202767719399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a27a6d67b2a29843959e2901ef60ecd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3895956202904438977
 GameObject:
   m_ObjectHideFlags: 0
@@ -2097,7 +2102,7 @@ Transform:
   m_LocalScale: {x: 36, y: 1, z: 10}
   m_Children: []
   m_Father: {fileID: 3895956202767719416}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3895956202904438981
 MeshFilter:
@@ -2192,7 +2197,7 @@ Transform:
   m_LocalScale: {x: 12, y: 1, z: 40}
   m_Children: []
   m_Father: {fileID: 3895956202767719416}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3895956202927016453
 MeshFilter:
@@ -2287,7 +2292,7 @@ Transform:
   m_LocalScale: {x: 12, y: 1, z: 40}
   m_Children: []
   m_Father: {fileID: 3895956202767719416}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3895956202937359329
 MeshFilter:
@@ -2358,33 +2363,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3895956202767719416}
     m_Modifications:
-    - target: {fileID: 2127213148667105142, guid: 69d58b197e40553429eb4509887b990a, type: 3}
-      propertyPath: m_RootOrder
+    - target: {fileID: -2800047665983946905, guid: 69d58b197e40553429eb4509887b990a, type: 3}
+      propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2127213148667105142, guid: 69d58b197e40553429eb4509887b990a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
+    - target: {fileID: -1371399384072187071, guid: 69d58b197e40553429eb4509887b990a, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2127213148667105142, guid: 69d58b197e40553429eb4509887b990a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2127213148667105142, guid: 69d58b197e40553429eb4509887b990a, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
+      propertyPath: m_RootOrder
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2127213148667105142, guid: 69d58b197e40553429eb4509887b990a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.67
+      value: -21.1
       objectReference: {fileID: 0}
     - target: {fileID: 2127213148667105142, guid: 69d58b197e40553429eb4509887b990a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.01
+      value: -1.41
       objectReference: {fileID: 0}
     - target: {fileID: 2127213148667105142, guid: 69d58b197e40553429eb4509887b990a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.1
+      value: 6.81
       objectReference: {fileID: 0}
     - target: {fileID: 2127213148667105142, guid: 69d58b197e40553429eb4509887b990a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2422,16 +2423,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2506986033014805994, guid: 69d58b197e40553429eb4509887b990a, type: 3}
-      propertyPath: m_TagString
-      value: AlienMask
-      objectReference: {fileID: 0}
     - target: {fileID: 8127424372541688104, guid: 69d58b197e40553429eb4509887b990a, type: 3}
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: -3389758529046163613, guid: 69d58b197e40553429eb4509887b990a, type: 3}
+    - {fileID: -2800047665983946905, guid: 69d58b197e40553429eb4509887b990a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 69d58b197e40553429eb4509887b990a, type: 3}
 --- !u!4 &400076910973031450 stripped
 Transform:

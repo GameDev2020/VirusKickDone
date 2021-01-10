@@ -8,17 +8,7 @@ public class DisableMask : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gm = GameManager.Instance;
-    GameObject[] MaskArray = GameObject.FindGameObjectsWithTag("AlienMask");
-        if (MaskArray.Length > 0 && !gm.disabledOnce)
-        {
-            for (int j = 0; j < MaskArray.Length; j++)
-            {                
-                GameObject go = MaskArray[j];
-                go.SetActive(false);
-                gm.disabledOnce = true;
-            }
-        }
+        gm = GameManager.Instance;    
     }
 
     // Update is called once per frame

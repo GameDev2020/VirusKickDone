@@ -17,8 +17,7 @@ public class Slider_Fill : MonoBehaviour
     }
 
     public void Reset()
-    {
-        
+    {        
         _slider.minValue = Time.time;
         _slider.maxValue = Time.time + FillTime;
     }

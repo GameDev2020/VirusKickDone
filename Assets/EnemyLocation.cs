@@ -30,8 +30,9 @@ public class EnemyLocation : MonoBehaviour
     void FixedUpdate()
     {        
         if (ExtendingVector3.IsGreaterOrEqual(player.gameObject.transform.position, gameObject.transform.position) && !passedEnemy) {
-            if (!gameObject.transform.parent.GetChild(0).gameObject.activeSelf)
+            if (!gameObject.transform.parent.Find("mask 1").gameObject.activeSelf)
             {
+                Debug.Log("Filling Infectiion Slider! ");
                 FillInfectionSlider();
                 passedEnemy = true;
             }            
@@ -47,5 +48,6 @@ public class EnemyLocation : MonoBehaviour
     public void DrainInfectionSlider()
     {
         if (slider.value - InfectionCoefficient > slider.minValue) slider.value += InfectionCoefficient;
+        if (slider.value - InfectionCoefficient <= slider.minValue) slider.value = slider.minValue;
     }
 }
