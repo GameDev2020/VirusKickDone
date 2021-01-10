@@ -5,8 +5,7 @@ using UnityEngine;
 public class maskCollision : MonoBehaviour
 {
     public void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("The Mask hitted: "+other.name);
+    { 
         if (other.transform.tag == "Virus")
             {
                 Destroy(this);
@@ -14,10 +13,8 @@ public class maskCollision : MonoBehaviour
         
         if (other.transform.tag == "Alien")
         {
-            int childCount=other.transform.parent.parent.childCount;
-            Debug.Log(other.transform.parent.name);
-            GameObject mask=other.transform.parent.parent.Find("mask 1").gameObject;
-            Debug.Log(mask.name);
+            Debug.Log("Collision With Enemy Detected! " + other.transform.name);
+            GameObject mask=other.transform.parent.parent.GetChild(0).gameObject;
             mask.SetActive(true);
             Destroy(this);
         }

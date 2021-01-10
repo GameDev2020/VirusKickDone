@@ -26,10 +26,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3100994429784349596}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.4, y: 1.94, z: -23.3}
-  m_LocalScale: {x: 8, y: 8, z: 8}
+  m_LocalPosition: {x: 12.4, y: 2.5, z: -18.8}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 5322820146359442235}
+  - {fileID: 1625600771502505252}
   m_Father: {fileID: 7180091172168828172}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -291,7 +292,7 @@ GameObject:
   - component: {fileID: 9003873038760984845}
   m_Layer: 0
   m_Name: Low_Poly
-  m_TagString: Virus
+  m_TagString: VirusColl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -420,7 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5449690b00420694bb58d442a526214b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  disableAfterSeconds: 40
+  disableAfterSeconds: 80
 --- !u!114 &-2446563383647316009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -475,6 +476,64 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &7364571511788530807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1625600771502505252}
+  - component: {fileID: 3730246575059256100}
+  - component: {fileID: 7187626870474321152}
+  m_Layer: 0
+  m_Name: coll
+  m_TagString: Virus
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1625600771502505252
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7364571511788530807}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.03, y: 0.12, z: 0.02}
+  m_LocalScale: {x: 0.55, y: 0.5, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 2522171039489566744}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &3730246575059256100
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7364571511788530807}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7187626870474321152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7364571511788530807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a27a6d67b2a29843959e2901ef60ecd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7756246870176583800
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,7 +547,7 @@ GameObject:
   - component: {fileID: 5080176279842126763}
   m_Layer: 0
   m_Name: sars_root
-  m_TagString: Virus
+  m_TagString: VirusColl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -527,7 +586,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7532f699e134c3547b373487f6b4d57f, type: 2}
+  - {fileID: 2100000, guid: 10b00101b267a784c90767e9043c195a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

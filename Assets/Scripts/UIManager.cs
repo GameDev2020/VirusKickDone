@@ -8,8 +8,7 @@ public class UIManager : MonoBehaviour
     private GameManager gm;
 
     public GameObject menu;
-    public TMP_Text scoreText;
-    public TMP_Text highScoreText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,12 +21,10 @@ public class UIManager : MonoBehaviour
         if (gm.startGame)
         {
             menu.SetActive(false);
-            scoreText.gameObject.SetActive(true);
         }
         else
         {
             menu.SetActive(true);
-            scoreText.gameObject.SetActive(false);
         } 
     }
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 380137275137871563}
   - component: {fileID: 5077917048481457970}
   - component: {fileID: 8127424372541688104}
-  - component: {fileID: -1371399384072187071}
+  - component: {fileID: -3389758529046163613}
   m_Layer: 0
   m_Name: mask 1
   m_TagString: Mask
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2506986033014805994}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7100962143453600616}
   m_Father: {fileID: 0}
@@ -101,7 +101,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &-1371399384072187071
+--- !u!54 &-3389758529046163613
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     public float SpeedMax = 1.5f;
     [SerializeField]
     public float nextLeveltime;
-    public float RotateSkybox=1.2f;
+    public float RotateSkybox=0.8f;
 
     private float time = 0;
     public string scene;
@@ -32,9 +32,11 @@ public class GameManager : MonoBehaviour
     public static event OnGameStart onGameStart;
     public static event OnGameStart onGameEnd;
 
-    public Animator animator;
+    private Slider InfectionSlider;
+    public int InfectionSliderReset = 0;
+    private float sceneStartTime;
 
-    private Slider InfectionSlider; 
+    public bool disabledOnce = false;
 
     public int Score { get; set; }
     public int HighScore{ get; set; }
@@ -51,17 +53,14 @@ public class GameManager : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {        
+    {
         InfectionSlider = GameObject.FindGameObjectWithTag("Infection Slider").GetComponent<Slider>();
         Player = GameObject.FindGameObjectWithTag("Player"); //define player object.
         initPlayer = transform.position;
         Player.transform.GetChild(3).gameObject.SetActive(false);
         startGame = false; // the game has not started yet
-        GameObject Grunkprefab = Player.transform.Find("Grunk Legacy prefab").gameObject;
-        animator=Grunkprefab.GetComponent<Animator>();
         PlayerChildColl.onCollision += ResetLevel; // initialize the game        
         StartCoroutine(WaitForSpace()); //waiting for press space key to start
-        
     }
 
 
@@ -72,8 +71,7 @@ public class GameManager : MonoBehaviour
     }
 
     private void GameStart()
-    {        
-        animator.SetBool("isRunning", true);
+    {
         Player.SetActive(true);
         InfectionSlider.value = 0;
         InfectionSlider.minValue = 0;
@@ -82,7 +80,7 @@ public class GameManager : MonoBehaviour
         onGameStart(); // update the event as active game.
         CurrentGameSpeed = SpeedMin; // initalize the first speed.
         startGame = true;
-
+        sceneStartTime = Time.time;
         for (int i = 0; i < hearts.Length; i++)
         {
           hearts[i].gameObject.SetActive(true);
@@ -91,29 +89,27 @@ public class GameManager : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        
-        RenderSettings.skybox.SetFloat("_Rotation", Time.time * RotateSkybox);
+    {        
         if (startGame)
         {
-            
+            RenderSettings.skybox.SetFloat("_Rotation", Time.timeSinceLevelLoad* RotateSkybox);
             timer += Time.deltaTime * CurrentGameSpeed;
             Score = Convert.ToInt32(timer);
 
-            if(CurrentGameSpeed< SpeedMax)  // define game acceleration
-                CurrentGameSpeed += Time.deltaTime / 500;
+          //  if(CurrentGameSpeed< SpeedMax)  // define game acceleration
+            //    CurrentGameSpeed += Time.deltaTime / 500;
 
             
             time += Time.deltaTime;
-            if (GameManager.Instance.CurrentGameSpeed != 0)
-            {
-                if (time > nextLeveltime / GameManager.Instance.CurrentGameSpeed) //the level is ended , loading next level after x seconds.
+          //  if (GameManager.Instance.CurrentGameSpeed != 0)
+          //  {
+                if (time > nextLeveltime) //the level is ended , loading next level after x seconds.
                 {
                     ResetLevel();     
                     SceneManager.LoadScene(scene);
 
                 }
-            }
+          //  }
 
             if(InfectionSlider.value >=1) ResetLevel();
 
@@ -123,7 +119,6 @@ public class GameManager : MonoBehaviour
                     ResetLevel();
                 
             }
-            
         }
 
 
@@ -140,7 +135,7 @@ public class GameManager : MonoBehaviour
                 ResetLevel();
             }
         }
-        
+
 
     }
     

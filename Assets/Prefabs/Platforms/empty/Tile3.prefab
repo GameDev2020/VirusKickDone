@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5449690b00420694bb58d442a526214b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  disableAfterSeconds: 40
+  disableAfterSeconds: 80
 --- !u!114 &-7578390035716697606
 MonoBehaviour:
   m_ObjectHideFlags: 0

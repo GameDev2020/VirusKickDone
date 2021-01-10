@@ -67,7 +67,7 @@ public class PlatformSpawner : MonoBehaviour
             platform.SetActive(true);
             if (platform.transform.childCount != 0)
             {
-               platform.transform.GetChild(0).gameObject.SetActive(true);                
+                platform.transform.GetChild(0).gameObject.SetActive(true);
             }
         }
     }

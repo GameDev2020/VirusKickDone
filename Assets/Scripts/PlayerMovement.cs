@@ -22,18 +22,15 @@ public class PlayerMovement : MonoBehaviour
     
     private Rigidbody _rigidbody;
     private PlayerCollision playerCollision;
-    private GameManager gm;
 
     private bool _jump = false;  
     private bool _isGrounded;
     private Vector3 initLocation;
-    
 
     float xThrow, yThrow;
     // Start is called before the first frame update
     void Start()
     {
-        gm = GameManager.Instance;
         initLocation = transform.position;
         _rigidbody = GetComponent<Rigidbody>();
         playerCollision = GetComponent<PlayerCollision>();
@@ -53,11 +50,9 @@ public class PlayerMovement : MonoBehaviour
     {
         ReadInput();        
         _isGrounded = playerCollision.isGrounded;
-        //if (_isGrounded) gm.animator.SetBool("isJumping", false);
 
         //Fall multiplier for jump
         ApplyFallMutltiplier();
-        
 
     }
 
@@ -66,7 +61,8 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)
         {
             _jump = true;
-        }        
+        }
+
         xThrow = Input.GetAxis("Horizontal");     
     }
 
@@ -108,12 +104,9 @@ public class PlayerMovement : MonoBehaviour
     private void Jump()
     {
         if (_jump)
-        {            
-            gm.animator.Play("Jump");
+        {
             _rigidbody.velocity = Vector3.up * _jumpmultiplier;
             _jump = false;
-            
         }
-        
     }
 }
