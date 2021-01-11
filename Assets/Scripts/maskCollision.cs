@@ -6,6 +6,7 @@ public class maskCollision : MonoBehaviour
 {
     public void OnTriggerEnter(Collider other)
     {
+               
         Debug.Log("We hit: " + other.name);
         if (other.transform.tag == "Virus")
             {
@@ -16,6 +17,7 @@ public class maskCollision : MonoBehaviour
         {            
             GameObject mask=other.transform.parent.parent.Find("mask 1").gameObject;
             mask.SetActive(true);
+            
             Destroy(this);
         }
 
