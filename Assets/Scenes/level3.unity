@@ -751,8 +751,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d75a0d17a1f110044acc15bffc77fc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyToPress: 304
-  prefabToSpawn: {fileID: 2506986033014805994, guid: 5fdaf4601a622cd42974f9f0d9f028de, type: 3}
+  keyToPress: 0
+  prefabToSpawn: {fileID: 2506986033014805994, guid: 69d58b197e40553429eb4509887b990a, type: 3}
   velocityOfSpawnedObject: {x: 0, y: 0, z: 1}
   lifeSpan: 0.25
 --- !u!95 &111896709
@@ -3868,7 +3868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d75a0d17a1f110044acc15bffc77fc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyToPress: 273
+  keyToPress: 304
   prefabToSpawn: {fileID: 2506986033014805994, guid: 69d58b197e40553429eb4509887b990a, type: 3}
   velocityOfSpawnedObject: {x: 0, y: 0, z: 1}
   lifeSpan: 0.25
@@ -5027,8 +5027,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 1559870881}
-  scoreText: {fileID: 0}
-  highScoreText: {fileID: 0}
 --- !u!114 &1705740536
 MonoBehaviour:
   m_ObjectHideFlags: 0
