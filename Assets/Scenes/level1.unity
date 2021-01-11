@@ -443,8 +443,8 @@ GameObject:
   - component: {fileID: 211108198}
   - component: {fileID: 211108197}
   - component: {fileID: 211108196}
-  - component: {fileID: 211108195}
   - component: {fileID: 211108204}
+  - component: {fileID: 211108195}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -464,10 +464,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d75a0d17a1f110044acc15bffc77fc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyToPress: 273
-  prefabToSpawn: {fileID: 2506986033014805994, guid: 69d58b197e40553429eb4509887b990a, type: 3}
-  velocityOfSpawnedObject: {x: 0, y: 0, z: 3}
-  lifeSpan: 2
+  keyToPress: 0
+  prefabToSpawn: {fileID: 0}
+  velocityOfSpawnedObject: {x: 0, y: 0, z: 10}
+  lifeSpan: 1.5
 --- !u!114 &211108196
 MonoBehaviour:
   m_ObjectHideFlags: 0

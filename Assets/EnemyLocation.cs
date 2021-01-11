@@ -30,7 +30,8 @@ public class EnemyLocation : MonoBehaviour
     void FixedUpdate()
     {        
         if (ExtendingVector3.IsGreaterOrEqual(player.gameObject.transform.position, gameObject.transform.position) && !passedEnemy) {
-            if (!gameObject.transform.parent.GetChild(0).gameObject.activeSelf)
+            Debug.Log(gameObject.transform.parent.parent.name);
+            if (!gameObject.transform.parent.parent.Find("mask 1").gameObject.activeSelf)
             {
                 FillInfectionSlider();
                 passedEnemy = true;

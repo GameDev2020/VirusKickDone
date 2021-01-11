@@ -31,10 +31,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6498411301796392496}
   - {fileID: 1113826848250617046}
   - {fileID: 1113826847765504195}
   - {fileID: 6234003166007571138}
+  - {fileID: 6498411301796392496}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -123,7 +123,7 @@ Transform:
   m_LocalScale: {x: 30, y: 1, z: 9.926398}
   m_Children: []
   m_Father: {fileID: 1113826847418738751}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1113826847765504192
 MeshFilter:
@@ -218,7 +218,7 @@ Transform:
   m_LocalScale: {x: 12, y: 1, z: 40}
   m_Children: []
   m_Father: {fileID: 1113826847418738751}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1113826848250617051
 MeshFilter:
@@ -649,6 +649,7 @@ GameObject:
   - component: {fileID: 6234003166004618134}
   - component: {fileID: 6705987720305695222}
   - component: {fileID: 4725687988331018519}
+  - component: {fileID: 4297436759445084106}
   m_Layer: 0
   m_Name: Body
   m_TagString: Alien
@@ -799,11 +800,24 @@ CapsuleCollider:
   m_GameObject: {fileID: 6234003166007733908}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 38.37085
   m_Height: 68.70908
   m_Direction: 1
   m_Center: {x: 0.6536571, y: -4.798362, z: 54.797676}
+--- !u!114 &4297436759445084106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6234003166007733908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab44a1fe6eae6b34ea24e3b80a12d9d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InfectionCoefficient: 0.2
 --- !u!1 &6234003166007733910
 GameObject:
   m_ObjectHideFlags: 0
@@ -1969,7 +1983,6 @@ GameObject:
   - component: {fileID: 6234003166007571138}
   - component: {fileID: 6234003166000340310}
   - component: {fileID: 4893335744566667429}
-  - component: {fileID: 6742111803439813961}
   - component: {fileID: 7339821313343754595}
   m_Layer: 0
   m_Name: Mesh
@@ -1994,7 +2007,7 @@ Transform:
   - {fileID: 6234003166007571134}
   - {fileID: 6234003166007571142}
   m_Father: {fileID: 1113826847418738751}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!95 &6234003166000340310
 Animator:
@@ -2031,19 +2044,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6742111803439813961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6234003166007734050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab44a1fe6eae6b34ea24e3b80a12d9d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InfectionCoefficient: 0.2
 --- !u!136 &7339821313343754595
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2428,7 +2428,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2127213148667105142, guid: 69d58b197e40553429eb4509887b990a, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2127213148667105142, guid: 69d58b197e40553429eb4509887b990a, type: 3}
       propertyPath: m_LocalScale.x
