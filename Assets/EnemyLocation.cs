@@ -31,14 +31,8 @@ public class EnemyLocation : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if ((new Vector3(0, 5, -5.7f).z >= gameObject.transform.parent.parent.Find("mask 1").position.z) && !passedEnemy)
-        {           
-            if (!gameObject.transform.parent.parent.Find("mask 1").gameObject.active)
-            {
-                FillInfectionSlider();
-                passedEnemy = true;
-            }
-        }
+        StartCoroutine(Timeoff()); StartCoroutine(Timeoff());
+       
 
     }
     public void FillInfectionSlider()
@@ -50,5 +44,19 @@ public class EnemyLocation : MonoBehaviour
     public void DrainInfectionSlider()
     {
         if (slider.value - InfectionCoefficient > slider.minValue) slider.value += InfectionCoefficient;
+    }
+
+    IEnumerator Timeoff()
+    {
+        yield return new WaitForSeconds(1f);
+        if ((new Vector3(0, 5, -5.7f).z >= gameObject.transform.parent.parent.Find("mask 1").position.z) && !passedEnemy)
+        {
+            if (!gameObject.transform.parent.parent.Find("mask 1").gameObject.activeSelf)
+            {
+                FillInfectionSlider();
+                passedEnemy = true;
+            }
+        }
+        
     }
 }

@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour
     public static event OnGameStart onGameStart;
     public static event OnGameStart onGameEnd;
 
+    public Animator animator;
+
     private Slider InfectionSlider;
     public int InfectionSliderReset = 0;
     private float sceneStartTime;
@@ -59,6 +61,8 @@ public class GameManager : MonoBehaviour
         initPlayer = transform.position;
         Player.transform.GetChild(3).gameObject.SetActive(false);
         startGame = false; // the game has not started yet
+        GameObject Grunkprefab = Player.transform.Find("Grunk Legacy prefab").gameObject;
+        animator = Grunkprefab.GetComponent<Animator>();
         PlayerChildColl.onCollision += ResetLevel; // initialize the game        
         StartCoroutine(WaitForSpace()); //waiting for press space key to start
     }
@@ -72,6 +76,7 @@ public class GameManager : MonoBehaviour
 
     private void GameStart()
     {
+        animator.SetBool("isRunning", true);
         Player.SetActive(true);
         InfectionSlider.value = 0;
         InfectionSlider.minValue = 0;

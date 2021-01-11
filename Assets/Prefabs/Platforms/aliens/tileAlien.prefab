@@ -1945,7 +1945,6 @@ GameObject:
   - component: {fileID: -128327471702742530}
   - component: {fileID: 5268835059921857386}
   - component: {fileID: -2493248935839289650}
-  - component: {fileID: 9131427117622451835}
   m_Layer: 0
   m_Name: tileAlien
   m_TagString: Ground
@@ -2055,18 +2054,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &9131427117622451835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3895956202767719399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a27a6d67b2a29843959e2901ef60ecd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3895956202904438977
 GameObject:
   m_ObjectHideFlags: 0

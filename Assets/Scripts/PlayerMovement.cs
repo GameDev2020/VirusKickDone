@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     
     private Rigidbody _rigidbody;
     private PlayerCollision playerCollision;
+    private GameManager gm;
 
     private bool _jump = false;  
     private bool _isGrounded;
@@ -31,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gm = GameManager.Instance;
         initLocation = transform.position;
         _rigidbody = GetComponent<Rigidbody>();
         playerCollision = GetComponent<PlayerCollision>();
@@ -105,6 +107,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (_jump)
         {
+            gm.animator.Play("Jump");
             _rigidbody.velocity = Vector3.up * _jumpmultiplier;
             _jump = false;
         }
