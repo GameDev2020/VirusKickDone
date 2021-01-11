@@ -753,7 +753,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyToPress: 0
   prefabToSpawn: {fileID: 2506986033014805994, guid: 69d58b197e40553429eb4509887b990a, type: 3}
-  velocityOfSpawnedObject: {x: 0, y: 0, z: 1}
+  velocityOfSpawnedObject: {x: 0, y: 0, z: 3}
   lifeSpan: 0.25
 --- !u!95 &111896709
 Animator:
@@ -3871,7 +3871,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyToPress: 273
   prefabToSpawn: {fileID: 2506986033014805994, guid: 69d58b197e40553429eb4509887b990a, type: 3}
-  velocityOfSpawnedObject: {x: 0, y: 0, z: 1}
+  velocityOfSpawnedObject: {x: 0, y: 0, z: 5}
   lifeSpan: 0.25
 --- !u!114 &1237409391
 MonoBehaviour:
