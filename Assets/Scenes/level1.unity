@@ -464,9 +464,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d75a0d17a1f110044acc15bffc77fc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyToPress: 304
+  keyToPress: 273
   prefabToSpawn: {fileID: 2506986033014805994, guid: 69d58b197e40553429eb4509887b990a, type: 3}
-  velocityOfSpawnedObject: {x: 0, y: 0, z: 1}
+  velocityOfSpawnedObject: {x: 0, y: 0, z: 5}
   lifeSpan: 0.25
 --- !u!114 &211108196
 MonoBehaviour:
@@ -788,7 +788,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 344543910}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: 3c934de741a4d874d93efcdf0a16a1e6, type: 3}
   m_Controller: {fileID: 9100000, guid: 6ea7a99b964a75a4d9c9364f6c001084, type: 2}
   m_CullingMode: 0
@@ -3654,6 +3654,7 @@ MonoBehaviour:
   - {fileID: 1998378947}
   - {fileID: 1437731139}
   - {fileID: 1315108069}
+  animator: {fileID: 0}
   InfectionSliderReset: 0
   disabledOnce: 0
 --- !u!1 &1528169053
@@ -5252,6 +5253,10 @@ PrefabInstance:
     - target: {fileID: 400100, guid: 1788cc5d786bdab41ac4cd69611d665e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 400100, guid: 1788cc5d786bdab41ac4cd69611d665e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 45.2
       objectReference: {fileID: 0}
     - target: {fileID: 400104, guid: 1788cc5d786bdab41ac4cd69611d665e, type: 3}
       propertyPath: m_RootOrder
