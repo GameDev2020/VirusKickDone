@@ -30,16 +30,6 @@ public class PlatformPooler : MonoBehaviour
             platformPooled.Add(obj);
         }
 
-        foreach (GameObject maskobj in platformPooled)
-        {
-            
-            GameObject mask = maskobj.transform.GetChild(0).gameObject;
-            mask.SetActive(false);
-
-        }
-
-
-
     }
 
     public GameObject GetPooledObject()
