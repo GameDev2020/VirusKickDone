@@ -740,7 +740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 775859c5cac254948b72dd13be9dc7e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotateSkybox: 1.2
+  RotateSkybox: 4
 --- !u!1 &1918307796
 GameObject:
   m_ObjectHideFlags: 0
