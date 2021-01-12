@@ -666,7 +666,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7274410149005189563}
   - component: {fileID: 7274410148995894831}
-  - component: {fileID: 170136294139014954}
   - component: {fileID: 1138204637125413193}
   m_Layer: 0
   m_Name: alien character
@@ -712,22 +711,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!54 &170136294139014954
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7274410149005294683}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!136 &1138204637125413193
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2613,7 +2596,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2506986033014805994, guid: 69d58b197e40553429eb4509887b990a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2506986033014805994, guid: 69d58b197e40553429eb4509887b990a, type: 3}
       propertyPath: m_TagString
