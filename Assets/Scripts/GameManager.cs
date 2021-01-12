@@ -97,6 +97,7 @@ public class GameManager : MonoBehaviour
     {        
         if (startGame)
         {
+            animator.SetBool("isRunning", true);
             RenderSettings.skybox.SetFloat("_Rotation", Time.timeSinceLevelLoad* RotateSkybox);
             timer += Time.deltaTime * CurrentGameSpeed;
             Score = Convert.ToInt32(timer);
